@@ -1,0 +1,496 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center only the container, not the entire body */
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  width: 100%; /* Ensure the header takes the full width */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav a, .dropbtn {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Nested Dropdown */
+.nested-dropdown {
+  position: relative;
+}
+
+.nested-btn {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.nested-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.nested-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.nested-dropdown:hover .nested-dropdown-content {
+  display: block;
+}
+
+.nested-dropdown-content a {
+  padding: 10px 15px;
+}
+
+.nested-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav {
+      flex-wrap: wrap;
+  }
+
+  .dropdown-content, .nested-dropdown-content {
+      min-width: 100px;
+  }
+}
+
+
+/* Style the logo image */
+.logo-img {
+width: 100px; /* Adjust the width as per your requirement */
+height: auto; /* Keep the aspect ratio */
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  flex: 1; /* Allow the container to grow and fill the available space */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: #555;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+a.btn:hover {
+  background-color: #218838;
+}
+
+h1, h2 {
+  font-size: 2rem; /* Increased font size */
+  margin-bottom: 10px;
+  color: #000;
+}
+
+p {
+  font-size: 1rem; /* Increased font size */
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #0056b3;
+}
+
+.products-title {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.products, .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product img.product-image {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: auto;
+  max-height: 150px; /* Set a maximum height for the images */
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the image fits within the container */
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+}
+
+.product button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+
+.product a.view-details {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product a.view-details:hover {
+  background-color: #0056b3;
+}
+
+.product-details {
+  text-align: center;
+}
+
+.product-details img.product-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px; /* Set a maximum height for the images */
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the image fits within the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the images */
+}
+
+.product-details .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product-details .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the quantity controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+quantity-controls input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.quantity-controls input::-webkit-outer-spin-button,
+.quantity-controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Style for the remove button */
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 16px;
+    padding: 0;
+}
+
+.remove-btn:hover {
+    color: darkred;
+}
+
+/* Style for the buttons */
+.product .btn {
+    display: inline-block;
+    margin-right: 10px; /* Add space between buttons */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product .btn:last-child {
+    margin-right: 0; /* Remove right margin for the last button */
+}
+
+.product .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style for labels */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Style for input fields */
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the order summary */
+.order-summary {
+    margin-bottom: 20px;
+}
+
+.order-summary h3 {
+    margin-bottom: 10px;
+}
+
+.order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.order-summary table th,
+.order-summary table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-summary table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.total-amount {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+}
