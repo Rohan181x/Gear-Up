@@ -17,7 +17,7 @@ $products = mysqli_query($conn, $query);
 <body>
     <header>
         <div class="logo">
-            <img src="images/logg.jpg" alt="Logo" class="logo-img">
+            <img src="images/head.png" alt="Logo" class="logo-img">
         </div>
         <nav>
             <a href="homepage.php">Home</a>
