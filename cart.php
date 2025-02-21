@@ -20,12 +20,12 @@ if (!isset($_SESSION['email'])) {
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
-                background-color: #f0f2f5;
+                background-color: #c8d8e4;
                 font-family: Arial, sans-serif;
             }
             .container {
                 text-align: center;
-                background: #fff;
+                background: #ffffff;
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -35,17 +35,17 @@ if (!isset($_SESSION['email'])) {
                 margin-bottom: 20px;
             }
             .logo img {
-                width: 5px;
+                width: 50px;
                 height: auto;
             }
             h1 {
                 margin-bottom: 20px;
-                color: #333;
+                color: black;
             }
             p {
                 margin-bottom: 20px;
                 font-size: 16px;
-                color: #555;
+                color: black;
             }
             a {
                 text-decoration: none;
@@ -56,27 +56,26 @@ if (!isset($_SESSION['email'])) {
                 display: inline-block;
             }
             a[href="login.php"] {
-                background-color: #007bff;
+                background-color: #52ab98;
                 color: white;
             }
             a[href="login.php"]:hover {
-                background-color: #0056b3;
+                background-color: #2b6777;
             }
             a[href="homepage.php"] {
-                background-color: #dc3545;
-                color: white;
+                background-color: #c8d8e4;
+                color: black;
             }
             a[href="homepage.php"]:hover {
-                background-color: #a71d2a;
+                background-color: #f2f2f2;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="logo">
-                <img src="./images/head.png" alt="Logo">
+                <img src="./images/topgear.png" alt="Logo">
             </div>
-            <h1>hello</h1>
             <h1>You are not logged in</h1>
             <p>Would you like to log in?</p>
             <a href="login.php">Yes</a>
@@ -170,6 +169,13 @@ if (isset($_POST['removeFromCart'])) {
             padding: 5px 10px;
             font-size: 16px;
             cursor: pointer;
+            background-color: #52ab98;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .quantity-controls button:hover {
+            background-color: #2b6777;
         }
         .quantity-controls input {
             width: 50px;
@@ -182,12 +188,32 @@ if (isset($_POST['removeFromCart'])) {
             -webkit-appearance: none;
             margin: 0;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff; /* Set table background to white */
+        }
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #c8d8e4;
+            text-align: left;
+        }
+        table th {
+            background-color: #52ab98;
+            color: black;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        table tr:hover {
+            background-color: #c8d8e4;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/Chad_logo2.png" alt="Logo" class="logo-img">
+            <img src="images/topgear.png" alt="Logo" class="logo-img">
         </div>
         <nav>
             <a href="homepage.php">Home</a>
@@ -243,16 +269,16 @@ if (isset($_POST['removeFromCart'])) {
                                 <td>
                                     <form action="cart.php" method="POST" style="display:inline;">
                                         <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['product_id']); ?>">
-                                        <button type="submit" name="removeFromCart">Remove</button>
+                                        <button type="submit" name="removeFromCart" style="background-color: #52ab98; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Remove</button>
                                     </form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <button type="submit" name="updateCart">Update Cart</button>
+                <button type="submit" name="updateCart" style="background-color: #52ab98; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Update Cart</button>
             </form>
-            <a href="checkout.php" class="btn">Proceed to Checkout</a>
+            <a href="checkout.php" class="btn" style="background-color: #52ab98; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px;">Proceed to Checkout</a>
         <?php else: ?>
             <p>Your cart is empty.</p>
         <?php endif; ?>
@@ -276,8 +302,9 @@ if (isset($_POST['removeFromCart'])) {
             });
         });
     </script>
+   
     <footer>
-        <p>&copy; 2024 E-commerce Website Chad Wears. All rights reserved. | <a href="aboutus_contactus.php">About Us</a> | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2024 E-commerce Website topgear. All rights reserved. | <a href="aboutus_contactus.php">About Us</a> | <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
 </html>

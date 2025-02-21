@@ -20,7 +20,7 @@ if (isset($_SESSION['email'])) {
     <div class="container">
         <div class="form-container">
             <h1>Create Account</h1>
-            <p>Please fill in the details to create your account.</p>
+            <p>Please fill in the details </p>
             <form action="validation.php" method="POST">
                 <label for="uname">Username</label>
                 <input type="text" id="uname" name="uname" placeholder="Enter your username" required>
@@ -38,7 +38,7 @@ if (isset($_SESSION['email'])) {
             
                 <!-- Signin Link -->
                 <p class="signin-link">
-                    Already have an account? <a href="login.php" class="signin-link">Login Please!</a>
+                    Already have an account? <a href="login.php" class="signin-link">Login Please</a>
                 </p>
             </form>
             

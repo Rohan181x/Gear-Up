@@ -5,7 +5,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Order Details</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">User Lists</li>
           </ol>
         </nav>
       </div>
@@ -37,11 +37,9 @@
                         <tbody>
                             <?php 
                             
-                            $users=getAll('users');
-                            if(mysqli_num_rows($users)>0)
-                            {
-                                foreach($users as $userItem)
-                                {
+                            $users = getAll('users');
+                            if (mysqli_num_rows($users) > 0) {
+                                foreach ($users as $userItem) {
                                     ?>
                                     <tr>
                                         <td><?= $userItem['id']; ?></td>
@@ -60,9 +58,7 @@
                                     </tr>
                                     <?php
                                 }
-                            }
-                            else
-                            {
+                            } else {
                                 ?>
                                 <tr>
                                     <td colspan="7">No Record Found</td>
@@ -80,3 +76,53 @@
     </div>
 
 <?php include('includes/footer.php'); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <style>
+        /* Inline CSS for table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #c8d8e4;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #52ab98;
+            color: black;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #c8d8e4;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2b6777;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #52ab98;
+        }
+    </style>
+</head>
+</html>

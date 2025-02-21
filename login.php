@@ -21,9 +21,9 @@ if (isset($_SESSION['email'])) {
     <style>
         /* Add some styles for the success message */
         .success-message {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background-color: #52ab98;
+            color: black;
+            border: 1px solid #2b6777;
             padding: 15px;
             margin-bottom: 20px;
             text-align: center;

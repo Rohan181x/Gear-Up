@@ -4,9 +4,9 @@ include('connection.php');
 
 // Check if the user is logged in
 if (!isset($_SESSION['email'])) {
-// User not logged in, show the "Not Logged In" page
-?>
-<!DOCTYPE html>
+    // User not logged in, show the "Not Logged In" page
+    ?>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -20,12 +20,12 @@ if (!isset($_SESSION['email'])) {
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
-                background-color: #f0f2f5;
+                background-color: #c8d8e4;
                 font-family: Arial, sans-serif;
             }
             .container {
                 text-align: center;
-                background: #fff;
+                background: #ffffff;
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -35,17 +35,17 @@ if (!isset($_SESSION['email'])) {
                 margin-bottom: 20px;
             }
             .logo img {
-                width: 100px;
+                width: 50px;
                 height: auto;
             }
             h1 {
                 margin-bottom: 20px;
-                color: #333;
+                color: black;
             }
             p {
                 margin-bottom: 20px;
                 font-size: 16px;
-                color: #555;
+                color: black;
             }
             a {
                 text-decoration: none;
@@ -56,25 +56,25 @@ if (!isset($_SESSION['email'])) {
                 display: inline-block;
             }
             a[href="login.php"] {
-                background-color: #007bff;
+                background-color: #52ab98;
                 color: white;
             }
             a[href="login.php"]:hover {
-                background-color: #0056b3;
+                background-color: #2b6777;
             }
             a[href="homepage.php"] {
-                background-color: #dc3545;
-                color: white;
+                background-color: #c8d8e4;
+                color: black;
             }
             a[href="homepage.php"]:hover {
-                background-color: #a71d2a;
+                background-color: #f2f2f2;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="logo">
-                <img src="images/Chad_logo2.png" alt="Logo">
+                <img src="images/topgear.png" alt="Logo">
             </div>
             <h1>You are not logged in</h1>
             <p>Would you like to log in?</p>
@@ -83,7 +83,7 @@ if (!isset($_SESSION['email'])) {
         </div>
     </body>
     </html>
-<?php
+    <?php
     exit();
 }
 
@@ -100,21 +100,14 @@ $default_profile_picture = "images/default_profile.png";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account - Chad Wears Website</title>
+    <title>Account - Topgear</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Add Font Awesome CSS -->
     <style>
-
         .container {
             text-align: center;
             margin-top: 20px;
-            padding: 20px;
-        }
-
-        .profile-picture img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 2px solid #ddd;
+            padding: 50px;
         }
 
         .user-details {
@@ -123,7 +116,8 @@ $default_profile_picture = "images/default_profile.png";
         }
 
         .user-details p {
-            margin: 5px 0;
+            margin: 20px 0;
+            color: black;
         }
 
         .account-options {
@@ -136,29 +130,37 @@ $default_profile_picture = "images/default_profile.png";
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
-            background-color: #007bff; /* Blue for "Change Password" */
+            background-color: #52ab98; /* Green for "Contact Us" */
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
 
+        .account-options a:hover {
+            background-color: #2b6777;
+        }
+
         .account-options button {
-            margin: 10px;
+            margin: 20px;
             padding: 10px 20px;
-            background-color: #ff4d4d; /* Red for "Logout" */
+            background-color: #52ab98; /* Green for "Logout" */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .account-options button:hover {
+            background-color: #2b6777;
+        }
     </style>
 </head>
 <body>
 <header>
-        <div class="logo">
-            <img src="images/Chad_logo2.png" alt="Logo" class="logo-img">
-        </div>
-        <nav>
+    <div class="logo">
+        <img src="images/topgear.png" alt="Logo" class="logo-img">
+    </div>
+    <nav>
         <a href="homepage.php">Home</a>
         <div class="dropdown">
             <span class="dropbtn">Categories</span>
@@ -173,34 +175,59 @@ $default_profile_picture = "images/default_profile.png";
                 ?>
             </div>
         </div>
-        <a href="cart.php">Cart</a>
+        <a href="cart.php"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
         <a href="aboutus_contactus.php">Contact Us</a>
         <a href="account.php">Account</a>
     </nav>
-    </header>
+</header>
 
-    <div class="container">
-        <div class="profile-picture">
-            <img src="<?php echo $default_profile_picture; ?>" alt="Profile Picture">
-        </div>
-
-        <div class="user-details">
-            <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1>
-            <p>Email: <?php echo htmlspecialchars($email); ?></p>
-        </div>
-
-        <div class="account-options">
-            <form action="logout.php" method="POST" style="margin: 0;">
-            <button type="submit">Logout</button>
-            </form>
-            <p>If you want to modify your details, please contact us.</p>
-            <a href="aboutus_contactus.php" class="btn">Contact Us</a>
-        </div>
-
+<div class="container">
+    <div class="user-details">
+        <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1>
+        <p>Email: <?php echo htmlspecialchars($email); ?></p>
     </div>
 
-    <footer>
-        <p>&copy; 2024 E-commerce Website Chad Wears. All rights reserved. | <a href="aboutus_contactus.php">About Us</a> | <a href="#">Privacy Policy</a></p>
-    </footer>
+    <div class="account-options">
+        <form action="logout.php" method="POST" style="margin: 0;">
+            <button type="submit">Logout</button>
+        </form>
+        <p>If you want to modify your details, please contact us.</p>
+        <a href="aboutus_contactus.php" class="btn">Contact Us</a>
+    </div>
+</div>
 </body>
 </html>
+  <!--footer-->
+  <footer class="footer">
+       <div class="container">
+       	<div class="row">
+       		<div class="footer-col">
+       			<h4>company</h4>
+       			<ul>
+       				<li><a href="#">about us</a></li>
+       				<li><a href="#">our services</a></li>
+       				<li><a href="#">privacy policy</a></li>
+       			</ul>
+       		</div>
+       		<div class="footer-col">
+       			<h4>get help</h4>
+       			<ul>
+       				<li><a href="#">FAQ</a></li>
+       				<li><a href="#">shipping</a></li>
+       				<li><a href="#">returns</a></li>
+       				<li><a href="#">order status</a></li>
+       				<li><a href="#">payment options</a></li>
+       			</ul>
+       		</div>
+       		
+       		<div class="footer-col">
+       			<h4>follow us</h4>
+       			<div class="social-links">
+       				<a href="#"><i class="fab fa-facebook-f"></i></a>
+       				<a href="#"><i class="fab fa-twitter"></i></a>
+       				<a href="#"><i class="fab fa-instagram"></i></a>
+       			</div>
+       		</div>
+       	</div>
+       </div> 
+  </footer>

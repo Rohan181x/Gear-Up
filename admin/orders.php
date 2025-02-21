@@ -33,47 +33,47 @@ if (!$orders) {
 
         table th, table td {
             padding: 12px 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #c8d8e4;
             text-align: left;
         }
 
         table th {
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #52ab98;
+            color: black;
         }
 
         table tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #f2f2f2;
         }
 
         table tr:hover {
-            background-color: #f1f1f1;
+            background-color: #c8d8e4;
         }
 
         .btn {
             display: inline-block;
             padding: 10px 15px;
-            background-color: #fc7414;
-            color: #fff;
+            background-color: #2b6777;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
 
         .btn:hover {
-            background-color: #fc7414;
+            background-color: #52ab98;
         }
     </style>
     <!-- Navbar -->
-<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
-      <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Orders</li>
-          </ol>
-        </nav>
-      </div>
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+        <div class="container-fluid py-1 px-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+                    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Orders</li>
+                </ol>
+            </nav>
+        </div>
     </nav>
     <!-- End Navbar -->
 </head>

@@ -6,8 +6,8 @@ require 'vendor/autoload.php';
 $order_id = $_GET['order_id'];
 $amount = $_GET['amount'] * 100; // Convert to cents
 
-$success_url = 'http://localhost/ecommerce/stripe_success.php?session_id={CHECKOUT_SESSION_ID}&order_id=' . $order_id;
-$cancel_url = 'http://localhost/ecommerce/stripe_cancel.php?order_id=' . $order_id;
+$success_url = 'http://localhost/ec/stripe_success.php?session_id={CHECKOUT_SESSION_ID}&order_id=' . $order_id;
+$cancel_url = 'http://localhost/ec/stripe_cancel.php?order_id=' . $order_id;
 
 // Log the URLs for debugging
 error_log("Success URL: " . $success_url);

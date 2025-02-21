@@ -36,6 +36,63 @@ if (!$products) {
     <meta charset="UTF-8">
     <title>Products</title>
     <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <style>
+        /* Inline CSS for table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #c8d8e4;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #52ab98;
+            color: black;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #c8d8e4;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2b6777;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #52ab98;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -87,7 +144,7 @@ if (!$products) {
                                         <td><?= $productItem['category_id']; ?></td>
                                         <td>
                                             <a href="products-edit.php?id=<?= $productItem['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                                            <a href="products-delete.php?id=<?= $productItem['id']; ?>" 
+                                            <a href="delete_product.php?id=<?= $productItem['id']; ?>" 
                                                 class="btn btn-danger btn-sm mx-2"
                                                 onclick="return confirm('Are you sure you want to delete this data?')"
                                                 >

@@ -20,7 +20,7 @@ $product_data = mysqli_fetch_assoc($product);
 <body>
 <header>
         <div class="logo">
-            <img src="images/Chad_logo2.png" alt="Logo" class="logo-img">
+            <img src="images/topgear.png" alt="Logo" class="logo-img">
         </div>
         <nav>
             <a href="homepage.php">Home</a>
