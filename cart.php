@@ -159,6 +159,7 @@ if (isset($_POST['removeFromCart'])) {
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Add Font Awesome CSS -->
     <style>
         .quantity-controls {
             display: flex;
@@ -230,7 +231,7 @@ if (isset($_POST['removeFromCart'])) {
                     ?>
                 </div>
             </div>
-            <a href="cart.php">Cart</a>
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
             <a href="aboutus_contactus.php">Contact Us</a>
             <a href="account.php">Account</a>
         </nav>
